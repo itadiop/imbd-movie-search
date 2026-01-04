@@ -1,0 +1,170 @@
+:root {
+  --bg: #1C1C1C;
+  --panel: #2C2C2C(255,255,255,0.04);
+  --panel-hover: #B39CD0(0,255,180,0.06);
+  --accent: #A8DADC;
+  --text-main: #E4E4E4;
+  --text-muted: #ffffff;
+  --radius: 12px;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg);
+  color: var(--text-main);
+  text-align: center;
+  padding: 50px 20px;
+}
+
+input, select, button {
+  padding: 0.9rem 1.6rem;
+  font-size: 15px;
+  border-radius: 1.5rem;
+  border: none;
+  outline: none;
+  width: 220px;
+  background: #1e1e1e;
+  color: #fff;
+}
+
+input, select {
+  width: 200px;
+}
+
+button {
+  background-color: #fff;
+  border: 0 solid #e2e8f0;
+  border-radius: 1.5rem;
+  color: #0d172a;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.9rem 1.6rem;
+  text-align: center;
+  transition: all .15s cubic-bezier(.4, 0, .2, 1);
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.3);
+  user-select: none;
+}
+
+button:hover {
+  background-color: #B39CD0;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+#result {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+#player {
+  width: 96vw;
+  height: 88vh;
+  margin: 20px auto;
+  display: none;
+  border-radius: 18px;
+  border: none;
+}
+/* Results list styles */
+.result-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+  background: rgba(255,255,255,0.02);
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.result-item img {
+  width: 80px;
+  height: auto;
+  border-radius: 4px;
+}
+
+.result-item .no-poster {
+  width: 80px;
+  height: 120px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: rgba(255,255,255,0.02);
+  color: #bbb;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.result-item .meta {
+  text-align: left;
+}
+
+.controls {
+  display:flex;
+  gap: 12px;
+  align-items:center;
+  justify-content:center;
+  margin-top: 12px;
+}
+
+/* Make entire result row clickable */
+.result-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+.result-link:hover .result-item {
+  background: #B39CD0(0,255,180,0.06);
+  transform: translateY(-2px);
+}
+
+/* Details page */
+.details {
+  display: flex;
+  gap: 50px;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+.details .poster {
+  width: 320px; min-width: 320px;
+  max-width: 100%;
+  flex-direction: column;
+  gap: 14px;
+  align-items: center;
+}
+.details .poster img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+.details .meta {
+  text-align: left;
+}
+
+.play-btn {
+  row-gap: 15px;
+  width: 80%;
+  backdrop-filter: blur(6px);
+  background-color: #fff;
+  border: 0 solid #e2e8f0;
+  border-radius: 1.5rem;
+  color: #0d172a;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.9rem 1.6rem;
+  text-align: center;
+  transition: all .15s cubic-bezier(.4, 0, .2, 1);
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.3);
+  user-select: none;
+}
+
+.play-btn:hover {
+  background-color: #B39CD0;
+  color: #fff;
+  transform: translateY(-1px);
+}
