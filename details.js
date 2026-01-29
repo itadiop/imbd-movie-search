@@ -46,7 +46,10 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
       }
     } else {
-      container.innerHTML = `<p>Details not found for ID ${id}.</p>`;
+      container.innerHTML = '';
+      const notFoundMessage = document.createElement('p');
+      notFoundMessage.textContent = `Details not found for ID ${id}.`;
+      container.appendChild(notFoundMessage);
     }
   } catch (err) {
     container.innerHTML = '<p>Error fetching details. Please try again later.</p>';
