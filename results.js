@@ -62,7 +62,10 @@ document.addEventListener('DOMContentLoaded', () => {
         // Persist last search state
         try { sessionStorage.setItem('lastSearch', JSON.stringify({ q, page: p })); } catch (err) { /* ignore */ }
       } else {
-        resultsDiv.innerHTML = `<p>No results found for "${q}".</p>`;
+        resultsDiv.textContent = '';
+        const noResultsMessage = document.createElement('p');
+        noResultsMessage.textContent = `No results found for "${q}".`;
+        resultsDiv.appendChild(noResultsMessage);
         prevBtn.disabled = true;
         nextBtn.disabled = true;
         pageInfo.textContent = '';
