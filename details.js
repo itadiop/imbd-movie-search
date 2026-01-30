@@ -24,13 +24,15 @@ document.addEventListener('DOMContentLoaded', async () => {
           <button class="button" id="playBtn" href="#">Play</button>
           </div>
           <div class="meta">
-            <h2>${data.Title} (${data.Year})</h2>
-            <p><strong>Genre:</strong> ${data.Genre}</p>
-            <p><strong>Director:</strong> ${data.Director}</p>
-            <p><strong>Actors:</strong> ${data.Actors}</p>
-            <p><strong>Runtime:</strong> ${data.Runtime}</p>
-            <p><strong>Plot:</strong> ${data.Plot}</p>
-            <p><strong>IMDb Rating:</strong> ${data.imdbRating}</p>
+            <div class="white-box">
+            <h2 class="headdata">${data.Title} (${data.Year})</h2>
+            <p><strong class="headdata">Genre:</strong> ${data.Genre}</p>
+            <p><strong class="headdata">Director:</strong> ${data.Director}</p>
+            <p><strong class="headdata">Actors:</strong> ${data.Actors}</p>
+            <p><strong class="headdata">Runtime:</strong> ${data.Runtime}</p>
+            <p><strong class="headdata">Plot:</strong> ${data.Plot}</p>
+            <p><strong class="headdata">IMDb Rating:</strong> ${data.imdbRating}</p>
+            </div>
           </div>
         </div>
       `;
@@ -46,10 +48,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
       }
     } else {
-      container.innerHTML = '';
-      const notFoundMessage = document.createElement('p');
-      notFoundMessage.textContent = `Details not found for ID ${id}.`;
-      container.appendChild(notFoundMessage);
+      container.innerHTML = `<p>Details not found for ID ${id}.</p>`;
     }
   } catch (err) {
     container.innerHTML = '<p>Error fetching details. Please try again later.</p>';
@@ -79,5 +78,4 @@ document.addEventListener('DOMContentLoaded', async () => {
       window.location.href = 'results.html';
     });
   }
-
 });

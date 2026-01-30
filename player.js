@@ -50,10 +50,10 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   // Try multiple embed sources sequentially with a timeout
   const sources = [
-    'vidsrc.to',
-    'vidsrc-embed.ru',
-    'vidsrc-embed.su',
+    'vidsrcme.ru',
     'vidsrcme.su',
+    'vidsrc-me.ru',
+    'vidsrc-me.su',
     'vsrc.su'
   ];
   

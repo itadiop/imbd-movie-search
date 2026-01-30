@@ -6,14 +6,20 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <h1>🎬 IMDb Search & Player</h1>
-
-  <form id="searchForm">
-    <input type="text" id="movieName" placeholder="Enter name..." />
-    <button id="searchBtn" type="submit">Search</button>
-  </form>
-
+  <div class="image-container">
+    <img src="background.jpg" alt="background">
+    <div class="white-overlay">
+    <div class="text-overlay">
+      <h1>Search For Movies, Shows, Anime and More</h1>
+    </div>
+    <div class="form-overlay">
+      <form id="searchForm">
+        <input type="text" id="movieName" placeholder="Enter name..." />
+        <button id="searchBtn" type="submit">Search</button>
+      </form>
+    </div>
+    </div>
+  </div>
   <div id="result"></div>
 
   <script src="search.js"></script>
